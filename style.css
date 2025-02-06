@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    position: fixed; /* Фиксируем заголовок */
+    top: 0; /* Устанавливаем его в верхней части страницы */
+    width: 100%; /* Занимаем всю ширину */
+    background-color: white; /* Добавляем фон, чтобы текст был читаемым */
+    z-index: 1000; /* Устанавливаем уровень наложения, чтобы заголовок был выше других элементов */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 36px;
+    margin-left: 300px;
+    font-weight: bold;
+    margin-right: 50px; /* Отступ между логотипом и навигацией */
+}
+
+.nav ul {
+    list-style-type: none;
+    margin-left: 760px;
+    padding: 0;
+    display: flex;
+}
+
+.nav li {
+    margin: 0 15px; /* Отступ между вкладками */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.company-info {
+    color: black;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    background-color: #9ab8d4;
+    height: 800px;
+    margin-top: 60px; /* Добавляем отступ сверху, чтобы избежать перекрытия с фиксированным заголовком */
+}
+
+.right {
+    padding-left: 300px;
+    margin-bottom: 50px;
+}
+
+.company-name {
+    font-size: 30pt;
+    margin: 10px 0 5px 0;
+}
+
+.services {
+    font-size: 14pt;
+    color: #414141;
+}
+
+.order-button {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+
+.order-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.logo-container {
+    padding-left: 250px;
+}
+
+.company-logo {
+    width: 100px; /* Задайте ширину логотипа */
+    height: 500px; /* Автоматическая высота для сохранения пропорций */
+    width: 500px;
+}
+
+.container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на следующую строку */
+    gap: 30px;
+}
+
+.chablon,
+.key,
+.video {
+    width: calc(33% - 20px); /* Ограничиваем ширину карточек до 33% с учетом отступов */
+    height: 150px;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.chablon {
+    background-image: linear-gradient(90deg, #f0c699, #ede1d3);
+}
+
+.key {
+    background-image: linear-gradient(90deg, #ffe6cc, #bff2ff);
+}
+
+.video {
+    background-image: linear-gradient(90deg, #f5cbe8, #f7a8d9);
+}
+
+.intcont {
+    font-size: 14pt;
+    line-height: 2cm;
+    color: black;
+}
+
+.footer {
+    background-color: #9ab8d4; /* Цвет фона подвала */
+    padding: 20px; /* Отступы внутри подвала */
+    text-align: center; /* Центрируем текст */
+    position: relative; /* Устанавливаем позицию относительно родителя */
+    bottom: 0; /* Устанавливаем подвал внизу страницы */
+
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центрируем содержимое */
+}
+
+/* Медиа-запросы для мобильной версии */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: flex-start; /* Выравнивание по левому краю */
+        padding: 5px; /* Отступы для мобильной версии */
+    }
+
+    .logo {
+        padding-left: 12px;
+        margin-left: 0; /* Убираем отступ слева */
+        margin-bottom: 10px; /* Отступ снизу */
+        font-size: 31px;
+    }
+
+    .nav ul {
+        margin-left: 0; /* Убираем отступ слева */
+        gap: 15px; /* Вертикальное расположение навигации */
+        padding: 0;
+        padding-left: 12px;
+    }
+
+    .nav li {
+        margin: 5px 0; /* Отступ между элементами навигации */
+    }
+
+    .company-info {
+        flex-direction: column; /* Вертикальное расположение элементов */
+        height: auto; /* Автоматическая высота */
+        padding: 100px; /* Отступы для мобильной версии */
+        margin-top: 60px; /* Добавляем отступ сверху для мобильной версии */
+    }
+
+    .company-name {
+        font-size: 35px;
+    }
+     
+    .right {
+        padding-left: 0; /* Убираем отступ слева */
+        margin-bottom: 20px; /* Отступ снизу */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .logo-container {
+        padding-left: 0; /* Убираем отступ слева */
+        text-align: center; /* Центрируем логотип */
+    }
+
+    .company-logo {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column; /* Вертикальное расположение карточек */
+        align-items: center; /* Центрируем карточки */
+        gap: 20px; /* Уменьшаем расстояние между карточками */
+    }
+
+    .chablon,
+    .key,
+    .video {
+        width: 90%; /* Ширина карточек для мобильной версии */
+        height: auto; /* Автоматическая высота */
+    }
+    
+}
