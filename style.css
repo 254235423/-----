@@ -152,7 +152,7 @@ header {
     .header-content {
         flex-direction: column; /* Вертикальное расположение элементов */
         align-items: flex-start; /* Выравнивание по левому краю */
-        padding: 5px; /* Отступы для мобильной версии */
+        padding: auto; /* Отступы для мобильной версии */
     }
 
     .logo {
